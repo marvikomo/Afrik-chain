@@ -1,7 +1,7 @@
 class Block {
     constructor(timestamp, lastHash, hash, data){
         this.timestamp = timestamp;
-        let data = data;
+        this.data = data;
         this.lastHash = lastHash
         this.hash = hash
 
@@ -16,6 +16,12 @@ class Block {
         Data.....: ${this.data}
         `
     }
+
+    static genesis(){
+        return new this('Genesis time','------','f157-h46',[])
+    }
+
+   
 }
 
 module.exports = Block
