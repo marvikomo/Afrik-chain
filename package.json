@@ -1,0 +1,23 @@
+{
+  "name": "Afrik",
+  "version": "1.0.0",
+  "description": "Afrik is a blockchain network that uses the proof of work concept",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvikomo/Afrik.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvikomo/Afrik/issues"
+  },
+  "homepage": "https://github.com/marvikomo/Afrik#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
