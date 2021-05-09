@@ -24,4 +24,16 @@ describe('testing blockchain', ()=>{
 
       expect(blockchain.validChain(blockchain2.chain)).toBe(true)
     })
+
+    it('invalidates a chain with a corrupt genesis block', ()=>{
+        blockchain2.chain[0].data = "good";
+        
+        expect(blockchain.validChain(blockchain2.chain)).toBe(false);
+    })
+
+    it('invalidates a corrupt chain', ()=>{
+        blockchain2.addBlock('good');
+        blockchain2.chain[1].data ='bad'
+        expect(blockchain.validChain(blockchain2.chain)).toBe(false);
+    })
 })
