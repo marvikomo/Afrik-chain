@@ -1,4 +1,4 @@
-const Blockchain = require('./blockchain')
+const Blockchain = require('.')
 const Block = require('./block')
 
 describe('testing blockchain', ()=>{
@@ -35,5 +35,19 @@ describe('testing blockchain', ()=>{
         blockchain2.addBlock('good');
         blockchain2.chain[1].data ='bad'
         expect(blockchain.validChain(blockchain2.chain)).toBe(false);
+    })
+
+    it('replaces the chain with a valid chain', ()=>{
+        blockchain2.addBlock('cool block')
+        blockchain.replaceChain(blockchain2.chain)
+
+        expect(blockchain.chain).toEqual(blockchain2.chain)
+    })
+
+    it('doesnt replace  the chain with a lesser legth', ()=>{
+        blockchain.addBlock("good")
+        blockchain.replaceChain(blockchain2.chain)
+
+        expect(blockchain.chain).not.toEqual(blockchain2.chain);
     })
 })

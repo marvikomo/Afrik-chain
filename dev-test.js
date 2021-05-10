@@ -1,4 +1,4 @@
-const Block = require('./block');
+const Block = require('./blockchain/block');
 
 const bc = require('./blockchain')
 
