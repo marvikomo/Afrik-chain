@@ -6,7 +6,7 @@ const P2PServer = require('./p2p-server')
 const HTTP_PORT = process.env.HTTP_PORT || 8900;
 
 // Route
-const blocksRoute = require('../routes/block')
+const blocksRoute = require('./routes/block')
 
 const app = express();
 
